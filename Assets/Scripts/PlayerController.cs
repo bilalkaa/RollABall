@@ -6,7 +6,7 @@ using UnityEngine.InputSystem ;
 
 public class PlayerController : MonoBehaviour{
     public Vector2 moveValue;
-    public float speed = 500;
+    public float speed = 700;
     private int count;
     private int numPickups = 12;
 
@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour{
             other.gameObject.SetActive(false);
             
             count++;
+
+            this.speed+=25;
 
             SetCountText();
 
